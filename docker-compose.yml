@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    image: syncthing/syncthing
+    restart: unless-stopped
+    hostname: ${SYNCTHING_HOSTNAME:-syncthing}
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./_:/var/syncthing
+      - /media/windree:/var/syncthing/windree
+    network_mode: host
+    
