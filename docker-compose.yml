@@ -11,5 +11,6 @@ services:
       - ./_:/var/syncthing
       - /media/backup:/var/syncthing/backup
       - /media/windree:/var/syncthing/windree
+      - /media/me:/var/syncthing/me
     network_mode: host
     
