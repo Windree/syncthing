@@ -9,8 +9,17 @@ services:
       - PGID=1000
     volumes:
       - ./_:/var/syncthing
-      - /media/backup:/var/syncthing/backup
-      - /media/windree:/var/syncthing/windree
-      - /media/me:/var/syncthing/me
+
+      - /media/backup:/var/syncthing/backup/files
+      - ./_/backup:/var/syncthing/backup
+
+      - /media/windree:/var/syncthing/windree/files
+      - ./_/windree:/var/syncthing/windree
+
+      - /media/kat/files:/var/syncthing/kat/files
+      - ./_/kat:/var/syncthing/kat
+      
+      - /media/me:/var/syncthing/me/files
+      - ./_/me:/var/syncthing/me
     network_mode: host
     
