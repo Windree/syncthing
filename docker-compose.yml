@@ -5,8 +5,8 @@ services:
     restart: unless-stopped
     hostname: ${SYNCTHING_HOSTNAME:-syncthing}
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=0
+      - PGID=0
     volumes:
       - ./_:/var/syncthing
       - /media/marble:/var/syncthing/marble
