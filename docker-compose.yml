@@ -8,6 +8,6 @@ services:
       - PGID=0
     volumes:
       - ./data:/var/syncthing
-      - ${SYNCTHING_PATH}:/var/syncthing/data
+      - ${SYNCTHING_PATH}:/data
     network_mode: host
     
